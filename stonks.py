@@ -54,13 +54,14 @@ class Solution:
                 for k in range(len(prices)):
                     for l in range(k+1, len(prices)):
                         print(abs(prices[c]-prices[d]+prices[j]-prices[i]))
+                        print(0)
                         if prices[l]-prices[k]>prices[c]-prices[d]:
                             c = l
                             d = k
                 if prices[a]-prices[b]+prices[c]-prices[d]>res:
                     res = prices[a]-prices[b]+prices[c]-prices[d]
                 
-        return res-4
+        return res
 
 def main():
     array = input().split(" ")
