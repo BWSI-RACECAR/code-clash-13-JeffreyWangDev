@@ -59,7 +59,7 @@ class Solution:
                 if prices[a]-prices[b]+prices[c]-prices[d]>res:
                     res = prices[a]-prices[b]+prices[c]-prices[d]
             
-        return res
+        return res-4
 
 def main():
     array = input().split(" ")
