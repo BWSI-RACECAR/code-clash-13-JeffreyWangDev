@@ -40,22 +40,25 @@ Total profit = 4 + 8 = 12.
 class Solution:
     global res
     res = 0
+            
+    
     def stonks(self, prices):
         res = 0 
         a,b= 0,0
         c,d = 0,0
         for i in range(len(prices)):
             for j in range(i+1, len(prices)):
+                if prices[j]-prices[i]>prices[a]-prices[b]:
+                    a=j
+                    b=i
                 for k in range(len(prices)):
                     for l in range(k+1, len(prices)):
-                        if prices[i]-prices[j]>a-b:
-                            a = prices[j]
-                            b = prices[i]
-                        if prices[k]-prices[l]>c-d:
-                            c = prices[l]
-                            d = prices[k]
-                        if a-b+c-d>res:
-                            res = b-a+d-c
+                        if prices[l]-prices[k]>prices[c]-prices[d]:
+                            c = l
+                            d = k
+                if prices[a]-prices[b]+prices[c]-prices[d]>res:
+                    res = prices[a]-prices[b]+prices[c]-prices[d]
+            
         return res
 
 def main():
