@@ -39,9 +39,7 @@ Total profit = 4 + 8 = 12.
 
 class Solution:
     global res
-    res = 0 
-
-                        
+    res = 0
     def stonks(self, prices):
         res = 0 
         a,b= 0,0
@@ -57,7 +55,7 @@ class Solution:
                             c = prices[l]
                             d = prices[k]
                         if a-b+c-d>res:
-                            res = a-b+c-d
+                            res = b-a+d-c
         return res
 
 def main():
