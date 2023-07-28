@@ -50,10 +50,10 @@ class Solution:
             for j in range(i+1, len(prices)):
                 for k in range(len(prices)):
                     for l in range(k+1, len(prices)):
-                        if prices[j]-prices[i]>a-b:
+                        if prices[i]-prices[j]>a-b:
                             a = prices[j]
-                            b= prices[i]
-                        if prices[l]-prices[k]>c-d:
+                            b = prices[i]
+                        if prices[k]-prices[l]>c-d:
                             c = prices[l]
                             d = prices[k]
                         if a-b+c-d>res:
